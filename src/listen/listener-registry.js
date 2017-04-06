@@ -675,7 +675,7 @@ module.exports = class ListenerRegistry {
     }
     this._clientRegistry.sendToSubscribers(
       subscriptionName,
-      this._createHasProviderMessage(hasProvider, this._topic, subscriptionName)
+      this._createHasProviderMessage(hasProvider, this._topic, false, subscriptionName)
     )
   }
 

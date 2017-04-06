@@ -117,7 +117,7 @@ EventHandler.prototype._triggerEvent = function (messageSource, message) {
   }
 
   const outboundMessage = messageBuilder.getMsg(C.TOPIC.EVENT, C.ACTIONS.EVENT, message.data)
-  this._subscriptionRegistry.sendToSubscribers(message.data[0], outboundMessage, messageSource)
+  this._subscriptionRegistry.sendToSubscribers(message.data[0], outboundMessage, false, messageSource)
 }
 
 /**
